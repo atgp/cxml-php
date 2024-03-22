@@ -12,8 +12,8 @@ use CXml\Model\Header;
 
 class HeaderProcessor
 {
-    private CredentialRepositoryInterface $credentialRepository;
-    private AuthenticatorInterface $authenticator;
+    private $credentialRepository;
+    private $authenticator;
 
     public function __construct(CredentialRepositoryInterface $credentialRepository, AuthenticatorInterface $authenticator)
     {

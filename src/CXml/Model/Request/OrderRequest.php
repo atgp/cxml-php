@@ -10,7 +10,7 @@ class OrderRequest implements RequestPayloadInterface
     /**
      * @Ser\SerializedName("OrderRequestHeader")
      */
-    private OrderRequestHeader $orderRequestHeader;
+    private $orderRequestHeader;
 
     /**
      * @Ser\XmlList(inline=true, entry="ItemOut")
@@ -18,7 +18,7 @@ class OrderRequest implements RequestPayloadInterface
      *
      * @var ItemOut[]
      */
-    private array $itemOut = [];
+    private $itemOut = [];
 
     protected function __construct(OrderRequestHeader $orderRequestHeader)
     {

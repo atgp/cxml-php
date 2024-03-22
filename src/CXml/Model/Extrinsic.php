@@ -9,12 +9,12 @@ class Extrinsic
     /**
      * @Ser\XmlAttribute
      */
-    private string $name;
+    private $name;
 
     /**
      * @Ser\XmlValue(cdata=false)
      */
-    private string $value;
+    private $value;
 
     public function __construct(string $name, string $value)
     {

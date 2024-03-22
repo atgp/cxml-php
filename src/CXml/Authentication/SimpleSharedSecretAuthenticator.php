@@ -8,7 +8,7 @@ use CXml\Model\Header;
 
 class SimpleSharedSecretAuthenticator implements AuthenticatorInterface
 {
-    private string $sharedSecret;
+    private $sharedSecret;
 
     public function __construct(string $sharedSecret)
     {

@@ -9,12 +9,12 @@ class InventoryQuantity
     /**
      * @Ser\XmlAttribute
      */
-    private int $quantity;
+    private $quantity;
 
     /**
      * @Ser\SerializedName("UnitOfMeasure")
      */
-    private UnitOfMeasure $unitOfMeasure;
+    private $unitOfMeasure;
 
     public function __construct(int $quantity, string $unitOfMeasure)
     {

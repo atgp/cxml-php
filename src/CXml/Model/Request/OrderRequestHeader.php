@@ -27,48 +27,48 @@ class OrderRequestHeader
      * @Ser\XmlAttribute
      * @Ser\SerializedName("orderID")
      */
-    private string $orderId;
+    private $orderId;
 
     /**
      * @Ser\XmlAttribute
      * @Ser\SerializedName("orderDate")
      */
-    private \DateTimeInterface $orderDate;
+    private $orderDate;
 
     /**
      * @Ser\XmlAttribute
      */
-    private string $type = self::TYPE_NEW;
+    private $type = self::TYPE_NEW;
 
     /**
      * @Ser\XmlElement
      * @Ser\SerializedName("Total")
      */
-    private MoneyWrapper $total;
+    private $total;
 
     /**
      * @Ser\XmlElement
      * @Ser\SerializedName("ShipTo")
      */
-    private ?ShipTo $shipTo = null;
+    private $shipTo = null;
 
     /**
      * @Ser\XmlElement
      * @Ser\SerializedName("BillTo")
      */
-    private BillTo $billTo;
+    private $billTo;
 
     /**
      * @Ser\XmlElement
      * @Ser\SerializedName("Shipping")
      */
-    private ?Shipping $shipping = null;
+    private $shipping = null;
 
     /**
      * @Ser\XmlElement
      * @Ser\SerializedName("Tax")
      */
-    private ?Tax $tax = null;
+    private $tax = null;
 
     /**
      * @Ser\XmlList(inline=true, entry="Contact")
@@ -76,12 +76,12 @@ class OrderRequestHeader
      *
      * @var Contact[]
      */
-    private ?array $contacts = null;
+    private $contacts = null;
 
     /**
      * @Ser\SerializedName("SupplierOrderInfo")
      */
-    private ?SupplierOrderInfo $supplierOrderInfo = null;
+    private $supplierOrderInfo = null;
 
     public function __construct(
         string $orderId,

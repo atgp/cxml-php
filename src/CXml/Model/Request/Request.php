@@ -14,25 +14,25 @@ class Request
     /**
      * @Ser\SerializedName("Status")
      */
-    private ?Status $status = null;
+    private $status = null;
 
     /**
      * @Ser\XmlAttribute
      * @Ser\SerializedName("deploymentMode")
      */
-    private ?string $deploymentMode = null;
+    private $deploymentMode = null;
 
     /**
      * @Ser\XmlAttribute
      * @Ser\SerializedName("Id")
      */
-    private ?string $id = null;
+    private $id = null;
 
     /**
      * @Ser\Exclude
      * see CXmlWrappingNodeJmsEventSubscriber
      */
-    private RequestPayloadInterface $payload;
+    private $payload;
 
     public function __construct(
         RequestPayloadInterface $payload,

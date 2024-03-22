@@ -10,12 +10,12 @@ class CountryCode
      * @Ser\XmlAttribute
      * @Ser\SerializedName("isoCountryCode")
      */
-    private string $isoCountryCode;
+    private $isoCountryCode;
 
     /**
      * @Ser\XmlValue(cdata=false)
      */
-    private ?string $name = null;
+    private $name = null;
 
     public function __construct(string $isoCountryCode, string $name = null)
     {

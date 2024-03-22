@@ -9,13 +9,13 @@ class Party
     /**
      * @Ser\SerializedName("Credential")
      */
-    private Credential $credential;
+    private $credential;
 
     /**
      * @Ser\SerializedName("UserAgent")
      * @Ser\XmlElement (cdata=false)
      */
-    private ?string $userAgent = null;
+    private $userAgent = null;
 
     public function __construct(Credential $credential, string $userAgent = null)
     {

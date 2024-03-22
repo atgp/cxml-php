@@ -9,25 +9,25 @@ class Credential
     /**
      * @Ser\XmlAttribute
      */
-    private string $domain;
+    private $domain;
 
     /**
      * @Ser\SerializedName("Identity")
      * @Ser\XmlElement (cdata=false)
      */
-    private string $identity;
+    private $identity;
 
     /**
      * @Ser\SerializedName("CredentialMac")
      * @Ser\XmlElement (cdata=false)
      */
-    // private CredentialMac $credentialMac; TODO
+    // private $credentialMac; TODO
 
     /**
      * @Ser\SerializedName("SharedSecret")
      * @Ser\XmlElement (cdata=false)
      */
-    private ?string $sharedSecret = null;
+    private $sharedSecret = null;
 
     public function __construct(string $domain, string $identity, string $sharedSecret = null)
     {

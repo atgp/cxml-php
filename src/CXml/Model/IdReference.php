@@ -9,12 +9,12 @@ class IdReference
     /**
      * @Ser\XmlAttribute
      */
-    private string $domain;
+    private $domain;
 
     /**
      * @Ser\XmlAttribute
      */
-    private string $identifier;
+    private $identifier;
 
     public function __construct(string $domain, string $identifier)
     {

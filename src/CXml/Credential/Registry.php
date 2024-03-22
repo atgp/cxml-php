@@ -14,7 +14,7 @@ class Registry implements CredentialRepositoryInterface, AuthenticatorInterface
     /**
      * @var Credential[]
      */
-    private array $registeredCredentials = [];
+    private $registeredCredentials = [];
 
     public function registerCredential(Credential $credential): void
     {

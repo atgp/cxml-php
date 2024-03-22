@@ -9,17 +9,17 @@ class Header
     /**
      * @Ser\SerializedName("From")
      */
-    private Party $from;
+    private $from;
 
     /**
      * @Ser\SerializedName("To")
      */
-    private Party $to;
+    private $to;
 
     /**
      * @Ser\SerializedName("Sender")
      */
-    private Party $sender;
+    private $sender;
 
     public function __construct(Party $from, Party $to, Party $sender)
     {

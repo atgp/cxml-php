@@ -26,19 +26,19 @@ use CXml\Model\TransportInformation;
 
 class OrderRequestBuilder
 {
-    private array $items = [];
-    private string $orderId;
-    private \DateTimeInterface $orderDate;
-    private int $total = 0;
-    private string $currency;
-    private array $comments = [];
-    private array $contacts = [];
-    private ?ShipTo $shipTo = null;
-    private BillTo $billTo;
-    private string $language;
-    private ?Shipping $shipping = null;
-    private ?Tax $tax = null;
-    private array $extrinsics = [];
+    private $items = [];
+    private $orderId;
+    private $orderDate;
+    private $total = 0;
+    private $currency;
+    private $comments = [];
+    private $contacts = [];
+    private $shipTo = null;
+    private $billTo;
+    private $language;
+    private $shipping = null;
+    private $tax = null;
+    private $extrinsics = [];
 
     private function __construct(string $orderId, \DateTimeInterface $orderDate, string $currency, string $language = 'en')
     {
@@ -61,10 +61,10 @@ class OrderRequestBuilder
         string $language = 'en'
     ): self {
         if ($supplierOrderInfo = $punchOutOrderMessage->getPunchOutOrderMessageHeader()->getSupplierOrderInfo()) {
-            $orderId ??= $supplierOrderInfo->getOrderId();
-            $orderDate ??= $supplierOrderInfo->getOrderDate();
+            $orderId = $orderId ?? $supplierOrderInfo->getOrderId();
+            $orderDate = $orderDate ?? $supplierOrderInfo->getOrderDate();
         }
-        $currency ??= $punchOutOrderMessage->getPunchOutOrderMessageHeader()->getTotal()->getMoney()->getCurrency();
+        $currency = $currency ?? $punchOutOrderMessage->getPunchOutOrderMessageHeader()->getTotal()->getMoney()->getCurrency();
 
         if (null === $orderId) {
             throw new \LogicException('orderId should either be given or present in the PunchOutOrderMessage');

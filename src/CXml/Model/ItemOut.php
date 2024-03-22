@@ -10,35 +10,35 @@ class ItemOut
      * @Ser\XmlAttribute
      * @Ser\SerializedName("lineNumber")
      */
-    private int $lineNumber;
+    private $lineNumber;
 
     /**
      * @Ser\XmlAttribute
      * @Ser\SerializedName("quantity")
      */
-    private int $quantity;
+    private $quantity;
 
     /**
      * @Ser\XmlAttribute
      * @Ser\SerializedName("requestedDeliveryDate")
      */
-    private ?\DateTimeInterface $requestedDeliveryDate = null;
+    private $requestedDeliveryDate = null;
 
     /**
      * @Ser\XmlAttribute
      * @Ser\SerializedName("parentLineNumber")
      */
-    private ?int $parentLineNumber = null;
+    private $parentLineNumber = null;
 
     /**
      * @Ser\SerializedName("ItemID")
      */
-    private ItemId $itemId;
+    private $itemId;
 
     /**
      * @Ser\SerializedName("ItemDetail")
      */
-    private ItemDetail $itemDetail;
+    private $itemDetail;
 
     private function __construct(
         int $lineNumber,

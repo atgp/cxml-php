@@ -10,19 +10,19 @@ class Response
     /**
      * @Ser\SerializedName("Status")
      */
-    private Status $status;
+    private $status;
 
     /**
      * @Ser\XmlAttribute
      * @Ser\SerializedName("Id")
      */
-    private ?string $id = null;
+    private $id = null;
 
     /**
      * @Ser\Exclude
      * see CXmlWrappingNodeJmsEventSubscriber
      */
-    private ?ResponsePayloadInterface $payload = null;
+    private $payload = null;
 
     public function __construct(
         Status $status,

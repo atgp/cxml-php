@@ -11,7 +11,7 @@ class BillTo
     /**
      * @Ser\SerializedName("Address")
      */
-    private Address $address;
+    private $address;
 
     public function __construct(Address $address)
     {

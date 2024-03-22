@@ -11,7 +11,7 @@ class ShipTo
     /**
      * @Ser\SerializedName("Address")
      */
-    private Address $address;
+    private $address;
 
     /**
      * @Ser\XmlList(inline=true, entry="CarrierIdentifier")
@@ -19,12 +19,12 @@ class ShipTo
      *
      * @var CarrierIdentifier[]
      */
-    private array $carrierIdentifiers = [];
+    private $carrierIdentifiers = [];
 
     /**
      * @Ser\SerializedName("TransportInformation")
      */
-    private ?TransportInformation $transportInformation = null;
+    private $transportInformation = null;
 
     public function __construct(Address $address, TransportInformation $transportInformation = null)
     {

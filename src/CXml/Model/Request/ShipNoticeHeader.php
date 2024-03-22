@@ -18,27 +18,27 @@ class ShipNoticeHeader
      * @Ser\XmlAttribute
      * @Ser\SerializedName("shipmentID")
      */
-    private string $shipmentId;
+    private $shipmentId;
 
     /**
      * @Ser\XmlAttribute
      */
-    private \DateTimeInterface $noticeDate;
+    private $noticeDate;
 
     /**
      * @Ser\XmlAttribute
      */
-    private ?\DateTimeInterface $shipmentDate = null;
+    private $shipmentDate = null;
 
     /**
      * @Ser\XmlAttribute
      */
-    private ?\DateTimeInterface $deliveryDate = null;
+    private $deliveryDate = null;
 
     /**
      * @Ser\SerializedName("DocumentReference")
      */
-    private ?DocumentReference $documentReference = null;
+    private $documentReference = null;
 
     public function __construct(string $shipmentId, \DateTimeInterface $noticeDate = null, \DateTimeInterface $shipmentDate = null, \DateTimeInterface $deliveryDate = null, string $documentReference = null)
     {

@@ -11,7 +11,7 @@ class QuoteMessage implements MessagePayloadInterface
     /**
      * @Ser\SerializedName("QuoteMessageHeader")
      */
-    private QuoteMessageHeader $quoteMessageHeader;
+    private $quoteMessageHeader;
 
     private function __construct(QuoteMessageHeader $quoteMessageHeader)
     {

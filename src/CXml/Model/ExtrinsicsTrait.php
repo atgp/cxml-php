@@ -12,7 +12,7 @@ trait ExtrinsicsTrait
      *
      * @var Extrinsic[]
      */
-    protected array $extrinsics = [];
+    protected $extrinsics = [];
 
     public function addExtrinsic(Extrinsic $extrinsic): self
     {

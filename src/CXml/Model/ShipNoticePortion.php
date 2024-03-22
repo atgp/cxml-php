@@ -9,7 +9,7 @@ class ShipNoticePortion
     /**
      * @Ser\SerializedName("OrderReference")
      */
-    private OrderReference $orderReference;
+    private $orderReference;
 
     public function __construct(string $documentReference, string $orderId = null, \DateTimeInterface $orderDate = null)
     {

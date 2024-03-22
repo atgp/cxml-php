@@ -10,12 +10,12 @@ class SupplierOrderInfo
      * @Ser\XmlAttribute
      * @Ser\SerializedName("orderID")
      */
-    private string $orderId;
+    private $orderId;
 
     /**
      * @Ser\XmlAttribute
      */
-    private ?\DateTimeInterface $orderDate;
+    private $orderDate;
 
     public function __construct(string $orderId, \DateTimeInterface $orderDate = null)
     {

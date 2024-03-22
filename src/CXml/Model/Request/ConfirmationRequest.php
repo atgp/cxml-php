@@ -10,12 +10,12 @@ class ConfirmationRequest implements RequestPayloadInterface
     /**
      * @Ser\SerializedName("ConfirmationHeader")
      */
-    private ConfirmationHeader $confirmationHeader;
+    private $confirmationHeader;
 
     /**
      * @Ser\SerializedName("OrderReference")
      */
-    private OrderReference $orderReference;
+    private $orderReference;
 
     public function __construct(ConfirmationHeader $confirmationHeader, OrderReference $orderReference)
     {

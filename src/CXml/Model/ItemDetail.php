@@ -13,19 +13,19 @@ class ItemDetail
     /**
      * @Ser\SerializedName("UnitPrice")
      */
-    private MoneyWrapper $unitPrice;
+    private $unitPrice;
 
     /**
      * @Ser\SerializedName("Description")
      * @Ser\XmlElement (cdata=false)
      */
-    private Description $description;
+    private $description;
 
     /**
      * @Ser\SerializedName("UnitOfMeasure")
      * @Ser\XmlElement (cdata=false)
      */
-    private string $unitOfMeasure;
+    private $unitOfMeasure;
 
     /**
      * @Ser\XmlList(inline=true, entry="Classification")
@@ -33,31 +33,31 @@ class ItemDetail
      *
      * @var Classification[]
      */
-    private array $classifications = [];
+    private $classifications = [];
 
     /**
      * @Ser\SerializedName("ManufacturerPartID")
      * @Ser\XmlElement (cdata=false)
      */
-    private ?string $manufacturerPartId = null;
+    private $manufacturerPartId = null;
 
     /**
      * @Ser\SerializedName("ManufacturerName")
      * @Ser\XmlElement (cdata=false)
      */
-    private ?string $manufacturerName = null;
+    private $manufacturerName = null;
 
     /**
      * @Ser\SerializedName("URL")
      * @Ser\XmlElement (cdata=false)
      */
-    private ?string $url = null;
+    private $url = null;
 
     /**
      * @Ser\SerializedName("LeadTime")
      * @Ser\XmlElement (cdata=false)
      */
-    private ?int $leadtime = null;
+    private $leadtime = null;
 
     protected function __construct(Description $description, string $unitOfMeasure, MoneyWrapper $unitPrice)
     {

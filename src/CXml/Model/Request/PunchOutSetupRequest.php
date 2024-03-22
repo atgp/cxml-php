@@ -17,12 +17,12 @@ class PunchOutSetupRequest implements RequestPayloadInterface
     /**
      * @Ser\XmlAttribute
      */
-    private ?string $operation = null;
+    private $operation = null;
 
     /**
      * @Ser\SerializedName("BuyerCookie")
      */
-    private string $buyerCookie;
+    private $buyerCookie;
 
     /**
      * @Ser\XmlList(inline=true, entry="Extrinsic")
@@ -30,27 +30,27 @@ class PunchOutSetupRequest implements RequestPayloadInterface
      *
      * @var Extrinsic[]
      */
-    protected array $extrinsics = [];
+    protected $extrinsics = [];
 
     /**
      * @Ser\SerializedName("BrowserFormPost")
      */
-    private Url $browserFormPost;
+    private $browserFormPost;
 
     /**
      * @Ser\SerializedName("SupplierSetup")
      */
-    private Url $supplierSetup;
+    private $supplierSetup;
 
     /**
      * @Ser\SerializedName("ShipTo")
      */
-    private ?ShipTo $shipTo = null;
+    private $shipTo = null;
 
     /**
      * @Ser\SerializedName("SelectedItem")
      */
-    private ?SelectedItem $selectedItem = null;
+    private $selectedItem = null;
 
     /**
      * @Ser\XmlList(inline=true, entry="ItemOut")
@@ -58,7 +58,7 @@ class PunchOutSetupRequest implements RequestPayloadInterface
      *
      * @var ItemOut[]
      */
-    private array $itemOut = [];
+    private $itemOut = [];
 
     public function __construct(string $buyerCookie, string $browserFormPost, string $supplierSetup, ShipTo $shipTo = null, SelectedItem $selectedItem = null, string $operation = 'create')
     {

@@ -11,12 +11,12 @@ class PunchOutOrderMessage implements MessagePayloadInterface
      * @Ser\SerializedName("BuyerCookie")
      * @Ser\XmlElement (cdata=false)
      */
-    private string $buyerCookie;
+    private $buyerCookie;
 
     /**
      * @Ser\SerializedName("PunchOutOrderMessageHeader")
      */
-    private PunchOutOrderMessageHeader $punchOutOrderMessageHeader;
+    private $punchOutOrderMessageHeader;
 
     /**
      * @Ser\XmlList(inline=true, entry="ItemIn")
@@ -24,7 +24,7 @@ class PunchOutOrderMessage implements MessagePayloadInterface
      *
      * @var ItemIn[]
      */
-    private array $punchoutOrderMessageItems = [];
+    private $punchoutOrderMessageItems = [];
 
     private function __construct(string $buyerCookie, PunchOutOrderMessageHeader $punchOutOrderMessageHeader)
     {

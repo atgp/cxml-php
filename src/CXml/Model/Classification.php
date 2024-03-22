@@ -9,12 +9,12 @@ class Classification
     /**
      * @Ser\XmlAttribute
      */
-    private string $domain;
+    private $domain;
 
     /**
      * @Ser\XmlValue(cdata=false)
      */
-    private string $value;
+    private $value;
 
     public function __construct(string $domain, string $value)
     {

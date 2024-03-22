@@ -12,8 +12,8 @@ use CXml\Model\MultilanguageString;
 
 class ProductActivityMessageBuilder
 {
-    private ProductActivityMessage $productActivityMessage;
-    private string $warehouseCodeDomain;
+    private $productActivityMessage;
+    private $warehouseCodeDomain;
 
     private function __construct(string $messageId, string $warehouseCodeDomain)
     {

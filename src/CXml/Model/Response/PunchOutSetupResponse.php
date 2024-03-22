@@ -10,7 +10,7 @@ class PunchOutSetupResponse implements ResponsePayloadInterface
     /**
      * @Ser\SerializedName("StartPage")
      */
-    private Url $startPage;
+    private $startPage;
 
     public function __construct(Url $startPage)
     {

@@ -19,21 +19,21 @@ use CXml\Model\TransportInformation;
 
 class PunchOutOrderMessageBuilder
 {
-    private string $buyerCookie;
-    private string $currency;
-    private ?string $operationAllowed;
-    private string $language;
+    private $buyerCookie;
+    private $currency;
+    private $operationAllowed;
+    private $language;
 
     /**
      * @var ItemIn[]
      */
-    private array $punchoutOrderMessageItems = [];
-    private int $total = 0;
-    private ?Shipping $shipping = null;
-    private ?Tax $tax = null;
-    private string $orderId;
-    private ?\DateTimeInterface $orderDate;
-    private ?ShipTo $shipTo = null;
+    private $punchoutOrderMessageItems = [];
+    private $total = 0;
+    private $shipping = null;
+    private $tax = null;
+    private $orderId;
+    private $orderDate;
+    private $shipTo = null;
 
     private function __construct(string $language, string $buyerCookie, string $currency, string $operationAllowed = null)
     {

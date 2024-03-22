@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  */
 class MessageValidatorTest extends TestCase
 {
-    private DtdValidator $dtdValidator;
+    private $dtdValidator;
 
     protected function setUp(): void
     {

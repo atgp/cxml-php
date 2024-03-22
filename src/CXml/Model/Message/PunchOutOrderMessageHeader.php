@@ -19,32 +19,32 @@ class PunchOutOrderMessageHeader
     /**
      * @Ser\XmlAttribute
      */
-    private ?string $operationAllowed = null;
+    private $operationAllowed = null;
 
     /**
      * @Ser\SerializedName("Total")
      */
-    private MoneyWrapper $total;
+    private $total;
 
     /**
      * @Ser\SerializedName("ShipTo")
      */
-    private ?ShipTo $shipTo = null;
+    private $shipTo = null;
 
     /**
      * @Ser\SerializedName("Shipping")
      */
-    private ?Shipping $shipping = null;
+    private $shipping = null;
 
     /**
      * @Ser\SerializedName("Tax")
      */
-    private ?Tax $tax = null;
+    private $tax = null;
 
     /**
      * @Ser\SerializedName("SupplierOrderInfo")
      */
-    private ?SupplierOrderInfo $supplierOrderInfo = null;
+    private $supplierOrderInfo = null;
 
     public function __construct(MoneyWrapper $total, Shipping $shipping = null, Tax $tax = null, string $operationAllowed = null)
     {

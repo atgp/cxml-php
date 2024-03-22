@@ -10,7 +10,7 @@ class Description extends MultilanguageString
      * @Ser\SerializedName("ShortName")
      * @Ser\XmlElement(cdata=false)
      */
-    private ?string $shortName = null;
+    private $shortName = null;
 
     public function __construct(?string $value, string $type = null, string $lang = 'en')
     {

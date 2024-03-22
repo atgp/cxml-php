@@ -9,22 +9,22 @@ class Status
     /**
      * @Ser\XmlAttribute(namespace="http://www.w3.org/XML/1998/namespace")
      */
-    private ?string $lang = null;
+    private $lang = null;
 
     /**
      * @Ser\XmlAttribute
      */
-    private int $code;
+    private $code;
 
     /**
      * @Ser\XmlAttribute
      */
-    private string $text;
+    private $text;
 
     /**
      * @Ser\XmlValue(cdata=false)
      */
-    private ?string $message = null;
+    private $message = null;
 
     public function __construct(int $code = 200, string $text = 'OK', string $message = null, string $lang = null)
     {

@@ -10,7 +10,7 @@ class DocumentReference
      * @Ser\XmlAttribute
      * @Ser\SerializedName("payloadID")
      */
-    private string $payloadId;
+    private $payloadId;
 
     public function __construct(string $payloadId)
     {

@@ -11,12 +11,12 @@ class ProfileResponse implements ResponsePayloadInterface
     /**
      * @Ser\XmlAttribute
      */
-    private \DateTimeInterface $effectiveDate;
+    private $effectiveDate;
 
     /**
      * @Ser\XmlAttribute
      */
-    private ?\DateTimeInterface $lastRefresh = null;
+    private $lastRefresh = null;
 
     /**
      * @Ser\XmlList(inline=true, entry="Option")
@@ -24,7 +24,7 @@ class ProfileResponse implements ResponsePayloadInterface
      *
      * @var Option[]
      */
-    private array $options = [];
+    private $options = [];
 
     /**
      * @Ser\XmlList(inline=true, entry="Transaction")
@@ -32,7 +32,7 @@ class ProfileResponse implements ResponsePayloadInterface
      *
      * @var Transaction[]
      */
-    private array $transactions = [];
+    private $transactions = [];
 
     public function __construct(\DateTimeInterface $effectiveDate = null, \DateTimeInterface $lastRefresh = null)
     {

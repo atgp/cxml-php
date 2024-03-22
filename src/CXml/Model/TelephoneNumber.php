@@ -10,19 +10,19 @@ class TelephoneNumber
      * @Ser\SerializedName("CountryCode")
      * @Ser\XmlElement (cdata=false)
      */
-    private CountryCode $countryCode;
+    private $countryCode;
 
     /**
      * @Ser\SerializedName("AreaOrCityCode")
      * @Ser\XmlElement (cdata=false)
      */
-    private ?string $areaOrCityCode = null;
+    private $areaOrCityCode = null;
 
     /**
      * @Ser\SerializedName("Number")
      * @Ser\XmlElement (cdata=false)
      */
-    private ?string $number = null;
+    private $number = null;
 
     public function __construct(CountryCode $countryCode, string $areaOrCityCode = null, string $number = null)
     {

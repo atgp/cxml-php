@@ -10,13 +10,13 @@ class Phone
      * @Ser\SerializedName("TelephoneNumber")
      * @Ser\XmlElement (cdata=false)
      */
-    private TelephoneNumber $telephoneNumber;
+    private $telephoneNumber;
 
     /**
      * @Ser\XmlAttribute
      * @Ser\SerializedName("name")
      */
-    private ?string $name = null;
+    private $name = null;
 
     public function __construct(TelephoneNumber $telephoneNumber, string $name = null)
     {

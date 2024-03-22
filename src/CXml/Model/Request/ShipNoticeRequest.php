@@ -11,7 +11,7 @@ class ShipNoticeRequest implements RequestPayloadInterface
     /**
      * @Ser\SerializedName("ShipNoticeHeader")
      */
-    private ShipNoticeHeader $shipNoticeHeader;
+    private $shipNoticeHeader;
 
     /**
      * @Ser\XmlList(inline=true, entry="ShipControl")
@@ -19,7 +19,7 @@ class ShipNoticeRequest implements RequestPayloadInterface
      *
      * @var ShipControl[]
      */
-    private array $shipControls = [];
+    private $shipControls = [];
 
     /**
      * @Ser\XmlList(inline=true, entry="ShipNoticePortion")
@@ -27,7 +27,7 @@ class ShipNoticeRequest implements RequestPayloadInterface
      *
      * @var ShipNoticePortion[]
      */
-    private array $shipNoticePortions = [];
+    private $shipNoticePortions = [];
 
     public function __construct(ShipNoticeHeader $shipNoticeHeader)
     {

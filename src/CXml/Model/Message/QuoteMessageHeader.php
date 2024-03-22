@@ -26,52 +26,52 @@ class QuoteMessageHeader
      * @Ser\SerializedName("type")
      * @Ser\XmlAttribute
      */
-    private string $type;
+    private $type;
 
     /**
      * @Ser\SerializedName("quoteID")
      * @Ser\XmlAttribute
      */
-    private string $quoteId;
+    private $quoteId;
 
     /**
      * @Ser\XmlAttribute
      */
-    private \DateTimeInterface $quoteDate;
+    private $quoteDate;
 
     /**
      * @Ser\XmlAttribute
      */
-    private string $currency;
+    private $currency;
 
     /**
      * @Ser\XmlAttribute(namespace="http://www.w3.org/XML/1998/namespace")
      */
-    private string $lang;
+    private $lang;
 
     /**
      * @Ser\SerializedName("OrganizationID")
      * @Ser\XmlElement (cdata=false)
      */
-    private OrganizationId $organizationId;
+    private $organizationId;
 
     /**
      * @Ser\SerializedName("Total")
      * @Ser\XmlElement (cdata=false)
      */
-    private MoneyWrapper $total;
+    private $total;
 
     /**
      * @Ser\SerializedName("ShipTo")
      * @Ser\XmlElement (cdata=false)
      */
-    private ShipTo $shipTo;
+    private $shipTo;
 
     /**
      * @Ser\SerializedName("Contact")
      * @Ser\XmlElement (cdata=false)
      */
-    private Contact $contact;
+    private $contact;
 
     public function __construct(OrganizationId $organizationId, MoneyWrapper $total, string $type, string $quoteId, \DateTime $quoteDate, string $currency, string $lang = 'en')
     {

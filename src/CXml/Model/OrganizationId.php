@@ -9,7 +9,7 @@ class OrganizationId
     /**
      * @Ser\SerializedName("Credential")
      */
-    private Credential $credential;
+    private $credential;
 
     public function __construct(Credential $credential)
     {

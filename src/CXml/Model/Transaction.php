@@ -9,13 +9,13 @@ class Transaction
     /**
      * @Ser\XmlAttribute
      */
-    private string $requestName;
+    private $requestName;
 
     /**
      * @Ser\SerializedName("URL")
      * @Ser\XmlElement(cdata=false)
      */
-    private string $url;
+    private $url;
 
     /**
      * @Ser\XmlList(inline=true, entry="Option")
@@ -23,7 +23,7 @@ class Transaction
      *
      * @var Option[]
      */
-    private array $options = [];
+    private $options = [];
 
     public function __construct(string $requestName, string $url)
     {

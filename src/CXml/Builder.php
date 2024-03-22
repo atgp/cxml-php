@@ -20,15 +20,15 @@ use CXml\Payload\PayloadIdentityFactoryInterface;
 
 class Builder
 {
-    private PayloadIdentityFactoryInterface $payloadIdentityFactory;
+    private $payloadIdentityFactory;
 
-    private ?PayloadInterface $payload = null;
-    private Credential $from;
-    private Credential $to;
-    private Credential $sender;
-    private ?string $senderUserAgent;
-    private ?Status $status = null;
-    private ?string $locale;
+    private $payload = null;
+    private $from;
+    private $to;
+    private $sender;
+    private $senderUserAgent;
+    private $status = null;
+    private $locale;
 
     private function __construct(string $senderUserAgent, string $locale = null, PayloadIdentityFactoryInterface $payloadIdentityFactory = null)
     {

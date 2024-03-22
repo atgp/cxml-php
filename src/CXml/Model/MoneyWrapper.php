@@ -9,7 +9,7 @@ class MoneyWrapper
     /**
      * @Ser\SerializedName("Money")
      */
-    private Money $money;
+    private $money;
 
     public function __construct(string $currency, int $value)
     {

@@ -10,7 +10,7 @@ class HandlerRegistry implements HandlerRegistryInterface
     /**
      * @var HandlerInterface[]
      */
-    private array $registry = [];
+    private $registry = [];
 
     public function register(HandlerInterface $handler, string $handlerId = null): void
     {

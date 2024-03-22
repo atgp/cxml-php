@@ -9,17 +9,17 @@ class Money
     /**
      * @Ser\XmlAttribute
      */
-    private string $currency;
+    private $currency;
 
     /**
      * @Ser\XmlValue(cdata=false)
      */
-    private string $value;
+    private $value;
 
     /**
      * @Ser\Exclude()
      */
-    private int $valueCent;
+    private $valueCent;
 
     public function __construct(string $currency, int $valueCent)
     {

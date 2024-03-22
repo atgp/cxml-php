@@ -12,51 +12,51 @@ class PostalAddress
      * @Ser\XmlAttribute
      * @Ser\SerializedName("name")
      */
-    private ?string $name = null;
+    private $name = null;
 
     /**
      * @Ser\XmlList(inline=true, entry="DeliverTo")
      * @Ser\Type("array<string>")
      * @Ser\XmlElement(cdata=false)
      */
-    private array $deliverTo;
+    private $deliverTo;
 
     /**
      * @Ser\XmlList(inline=true, entry="Street")
      * @Ser\Type("array<string>")
      * @Ser\XmlElement(cdata=false)
      */
-    private array $street;
+    private $street;
 
     /**
      * @Ser\SerializedName("City")
      * @Ser\XmlElement (cdata=false)
      */
-    private string $city;
+    private $city;
 
     /**
      * @Ser\SerializedName("Municipality")
      * @Ser\XmlElement (cdata=false)
      */
-    private ?string $municipality = null;
+    private $municipality = null;
 
     /**
      * @Ser\SerializedName("State")
      * @Ser\XmlElement (cdata=false)
      */
-    private ?string $state = null;
+    private $state = null;
 
     /**
      * @Ser\SerializedName("PostalCode")
      * @Ser\XmlElement (cdata=false)
      */
-    private ?string $postalCode = null;
+    private $postalCode = null;
 
     /**
      * @Ser\SerializedName("Country")
      * @Ser\XmlElement (cdata=false)
      */
-    private Country $country;
+    private $country;
 
     public function __construct(array $deliverTo, array $street, string $city, Country $country, string $municipality = null, string $state = null, string $postalCode = null, string $name = null)
     {

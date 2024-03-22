@@ -12,7 +12,7 @@ trait CommentsTrait
      *
      * @var Comment[]
      */
-    private ?array $comments = null;
+    private $comments = null;
 
     public function addCommentAsString(string $comment, string $type = null, string $lang = null): self
     {

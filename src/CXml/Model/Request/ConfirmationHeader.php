@@ -24,12 +24,12 @@ class ConfirmationHeader
      * @Ser\XmlAttribute
      * @Ser\SerializedName("type")
      */
-    private string $type;
+    private $type;
 
     /**
      * @Ser\XmlAttribute
      */
-    private \DateTimeInterface $noticeDate;
+    private $noticeDate;
 
     public function __construct(string $type, \DateTimeInterface $noticeDate = null)
     {

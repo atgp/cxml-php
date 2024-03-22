@@ -10,17 +10,17 @@ class ItemIn
      * @Ser\XmlAttribute
      * @Ser\SerializedName("quantity")
      */
-    private int $quantity;
+    private $quantity;
 
     /**
      * @Ser\SerializedName("ItemID")
      */
-    private ItemId $itemId;
+    private $itemId;
 
     /**
      * @Ser\SerializedName("ItemDetail")
      */
-    private ItemDetail $itemDetail;
+    private $itemDetail;
 
     protected function __construct(
         int $quantity,

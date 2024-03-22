@@ -6,8 +6,8 @@ use CXml\Model\CXml;
 
 class Context
 {
-    private ?CXml $cxml = null;
-    private array $options;
+    private $cxml = null;
+    private $options;
 
     private function __construct(array $options = [])
     {

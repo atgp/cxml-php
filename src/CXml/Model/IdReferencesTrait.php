@@ -12,7 +12,7 @@ trait IdReferencesTrait
      *
      * @var IdReference[]
      */
-    protected array $idReferences = [];
+    protected $idReferences = [];
 
     public function addIdReference(string $domain, string $identifier): self
     {

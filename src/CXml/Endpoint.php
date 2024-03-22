@@ -12,10 +12,10 @@ use Psr\Log\NullLogger;
 
 class Endpoint
 {
-    private Serializer $serializer;
-    private DtdValidator $dtdValidator;
-    private Processor $processor;
-    private LoggerInterface $logger;
+    private $serializer;
+    private $dtdValidator;
+    private $processor;
+    private $logger;
 
     public function __construct(
         Serializer $serializer,

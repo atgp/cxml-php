@@ -12,7 +12,7 @@ class ProductActivityMessage implements MessagePayloadInterface
     /**
      * @Ser\SerializedName("ProductActivityHeader")
      */
-    private ProductActivityHeader $productActivityHeader;
+    private $productActivityHeader;
 
     /**
      * @Ser\XmlList(inline=true, entry="ProductActivityDetails")
@@ -20,7 +20,7 @@ class ProductActivityMessage implements MessagePayloadInterface
      *
      * @var ProductActivityDetail[]
      */
-    private array $productActivityDetails = [];
+    private $productActivityDetails = [];
 
     private function __construct(string $messageId, string $processType = null, \DateTimeInterface $creationDate = null)
     {

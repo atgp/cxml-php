@@ -9,7 +9,7 @@ class SelectedItem
     /**
      * @Ser\SerializedName("ItemID")
      */
-    private ItemId $itemId;
+    private $itemId;
 
     public function __construct(ItemId $itemId)
     {

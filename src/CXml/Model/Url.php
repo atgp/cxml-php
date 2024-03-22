@@ -10,7 +10,7 @@ class Url
      * @Ser\SerializedName("URL")
      * @Ser\XmlElement(cdata=false)
      */
-    private string $url;
+    private $url;
 
     public function __construct(string $url)
     {

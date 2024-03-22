@@ -9,22 +9,22 @@ class ShipmentIdentifier
     /**
      * @Ser\XmlAttribute
      */
-    private ?string $domain = null;
+    private $domain = null;
 
     /**
      * @Ser\XmlAttribute
      */
-    private ?string $trackingNumberDate = null;
+    private $trackingNumberDate = null;
 
     /**
      * @Ser\XmlAttribute
      */
-    private ?string $trackingURL = null;
+    private $trackingURL = null;
 
     /**
      * @Ser\XmlValue(cdata=false)
      */
-    private string $value;
+    private $value;
 
     public function __construct(string $value, string $domain = null, string $trackingNumberDate = null, string $trackingURL = null)
     {

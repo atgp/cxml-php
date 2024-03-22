@@ -15,38 +15,38 @@ class CXml
     /**
      * @Ser\XmlAttribute(namespace="http://www.w3.org/XML/1998/namespace")
      */
-    private ?string $lang = null;
+    private $lang = null;
 
     /**
      * @Ser\XmlAttribute()
      * @Ser\SerializedName("payloadID")
      */
-    private string $payloadId;
+    private $payloadId;
 
     /**
      * @Ser\XmlAttribute()
      */
-    private \DateTimeInterface $timestamp;
+    private $timestamp;
 
     /**
      * @Ser\SerializedName("Header")
      */
-    private ?Header $header = null;
+    private $header = null;
 
     /**
      * @Ser\SerializedName("Request")
      */
-    private ?Request $request = null;
+    private $request = null;
 
     /**
      * @Ser\SerializedName("Response")
      */
-    private ?Response $response = null;
+    private $response = null;
 
     /**
      * @Ser\SerializedName("Message")
      */
-    private ?Message $message = null;
+    private $message = null;
 
     protected function __construct(
         string $payloadId,

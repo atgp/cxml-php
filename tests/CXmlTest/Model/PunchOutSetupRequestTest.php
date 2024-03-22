@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  */
 class PunchOutSetupRequestTest extends TestCase implements PayloadIdentityFactoryInterface
 {
-    private DtdValidator $dtdValidator;
+    private $dtdValidator;
 
     protected function setUp(): void
     {

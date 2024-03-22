@@ -14,7 +14,7 @@ use JMS\Serializer\SerializerInterface;
 
 class Serializer
 {
-    private SerializerInterface $jmsSerializer;
+    private $jmsSerializer;
 
     private function __construct(SerializerInterface $jmsSerializer)
     {

@@ -9,13 +9,13 @@ class Tax
     /**
      * @Ser\SerializedName("Money")
      */
-    private Money $money;
+    private $money;
 
     /**
      * @Ser\SerializedName("Description")
      * @Ser\XmlElement (cdata=false)
      */
-    private MultilanguageString $description;
+    private $description;
 
     public function __construct(string $currency, int $value, MultilanguageString $description)
     {

@@ -6,7 +6,7 @@ use CXml\Exception\CXmlNotAcceptableException;
 
 class CXmlInvalidException extends CXmlNotAcceptableException
 {
-    private string $xml;
+    private $xml;
 
     public function __construct(string $message, string $xml, \Throwable $previous = null)
     {

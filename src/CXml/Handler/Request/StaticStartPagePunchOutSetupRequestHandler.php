@@ -11,7 +11,7 @@ use CXml\Model\Url;
 
 class StaticStartPagePunchOutSetupRequestHandler implements HandlerInterface
 {
-    private string $startPageUrl;
+    private $startPageUrl;
 
     public function __construct(string $startPageUrl)
     {

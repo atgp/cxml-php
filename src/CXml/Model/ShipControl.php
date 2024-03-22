@@ -12,7 +12,7 @@ class ShipControl
      *
      * @var CarrierIdentifier[]
      */
-    private array $carrierIdentifiers = [];
+    private $carrierIdentifiers = [];
 
     /**
      * @Ser\XmlList(inline=true, entry="ShipmentIdentifier")
@@ -20,7 +20,7 @@ class ShipControl
      *
      * @var ShipmentIdentifier[]
      */
-    private array $shipmentIdentifiers = [];
+    private $shipmentIdentifiers = [];
 
     public function __construct(CarrierIdentifier $carrierIdentifier, ShipmentIdentifier $shipmentIdentifier)
     {

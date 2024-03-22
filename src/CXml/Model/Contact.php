@@ -27,19 +27,19 @@ class Contact
     /**
      * @Ser\XmlAttribute
      */
-    private ?string $role = null;
+    private $role = null;
 
     /**
      * @Ser\SerializedName("Name")
      * @Ser\XmlElement (cdata=false)
      */
-    private MultilanguageString $name;
+    private $name;
 
     /**
      * @Ser\SerializedName("Email")
      * @Ser\XmlElement (cdata=false)
      */
-    private ?string $email = null;
+    private $email = null;
 
     public function __construct(MultilanguageString $name, string $role = null)
     {

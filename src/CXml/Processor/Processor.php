@@ -25,7 +25,7 @@ use CXml\Processor\Exception\CXmlProcessException;
 class Processor
 {
     // according to cXML reference document
-    private static array $exceptionMapping = [
+    private static $exceptionMapping = [
         CXmlAuthenticationInvalidException::class => 401,
         CXmlNotAcceptableException::class => 406,
         CXmlConflictException::class => 409,
@@ -34,7 +34,7 @@ class Processor
         CXmlNotImplementedException::class => 450,
     ];
 
-    private static array $exceptionCodeMapping = [
+    private static $exceptionCodeMapping = [
         // cxml
         450 => 'Not Implemented',
 
@@ -103,9 +103,9 @@ class Processor
         511 => 'Network Authentication Required',                             // RFC6585
     ];
 
-    private HeaderProcessor $headerProcessor;
-    private HandlerRegistryInterface $handlerRegistry;
-    private Builder $builder;
+    private $headerProcessor;
+    private $handlerRegistry;
+    private $builder;
 
     public function __construct(
         HeaderProcessor $requestProcessor,
@@ -122,7 +122,7 @@ class Processor
      */
     public function process(CXml $cxml, Context $context = null): ?CXml
     {
-        $context ??= Context::create();
+        $context = $context ?? Context::create();
         $context->setCXml($cxml);
 
         $request = $cxml->getRequest();

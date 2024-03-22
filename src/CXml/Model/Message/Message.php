@@ -10,31 +10,31 @@ class Message
     /**
      * @Ser\SerializedName("Status")
      */
-    private ?Status $status = null;
+    private $status = null;
 
     /**
      * @Ser\XmlAttribute
      * @Ser\SerializedName("deploymentMode")
      */
-    private ?string $deploymentMode = null;
+    private $deploymentMode = null;
 
     /**
      * @Ser\XmlAttribute
      * @Ser\SerializedName("inReplyTo")
      */
-    private ?string $inReplyTo = null;
+    private $inReplyTo = null;
 
     /**
      * @Ser\XmlAttribute
      * @Ser\SerializedName("Id")
      */
-    private ?string $id = null;
+    private $id = null;
 
     /**
      * @Ser\Exclude
      * see CXmlWrappingNodeJmsEventSubscriber
      */
-    private MessagePayloadInterface $payload;
+    private $payload;
 
     public function __construct(
         MessagePayloadInterface $message,

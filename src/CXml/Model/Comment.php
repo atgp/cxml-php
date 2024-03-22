@@ -9,22 +9,22 @@ class Comment
     /**
      * @Ser\SerializedName("Attachment")
      */
-    private ?Url $attachment = null;
+    private $attachment = null;
 
     /**
      * @Ser\XmlValue(cdata=false)
      */
-    private ?string $value = null;
+    private $value = null;
 
     /**
      * @Ser\XmlAttribute(namespace="http://www.w3.org/XML/1998/namespace")
      */
-    private ?string $lang = null;
+    private $lang = null;
 
     /**
      * @Ser\XmlAttribute()
      */
-    private ?string $type = null;
+    private $type = null;
 
     public function __construct(string $value = null, string $type = null, string $lang = null, string $attachment = null)
     {

@@ -13,17 +13,17 @@ class ProductActivityHeader
      * @Ser\SerializedName("messageID")
      * @Ser\XmlAttribute
      */
-    private string $messageId;
+    private $messageId;
 
     /**
      * @Ser\XmlAttribute
      */
-    private ?string $processType = null;
+    private $processType = null;
 
     /**
      * @Ser\XmlAttribute
      */
-    private ?\DateTimeInterface $creationDate = null;
+    private $creationDate = null;
 
     public function __construct(string $messageId, string $processType = null, \DateTimeInterface $creationDate = null)
     {

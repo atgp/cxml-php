@@ -14,12 +14,12 @@ class StatusUpdateRequest implements RequestPayloadInterface
     /**
      * @Ser\SerializedName("DocumentReference")
      */
-    private ?DocumentReference $documentReference = null;
+    private $documentReference = null;
 
     /**
      * @Ser\SerializedName("Status")
      */
-    private Status $status;
+    private $status;
 
     public function __construct(Status $status, string $documentReference = null)
     {

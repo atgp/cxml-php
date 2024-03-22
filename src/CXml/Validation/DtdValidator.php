@@ -7,7 +7,7 @@ use CXml\Validation\Exception\CXmlInvalidException;
 
 class DtdValidator
 {
-    private string $pathToCxmlDtds;
+    private $pathToCxmlDtds;
 
     public function __construct(string $pathToCxmlDtds)
     {

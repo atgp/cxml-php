@@ -9,13 +9,13 @@ class Shipping
     /**
      * @Ser\SerializedName("Money")
      */
-    private Money $money;
+    private $money;
 
     /**
      * @Ser\SerializedName("Description")
      * @Ser\XmlElement (cdata=false)
      */
-    private Description $description;
+    private $description;
 
     public function __construct(string $currency, int $value, Description $description)
     {

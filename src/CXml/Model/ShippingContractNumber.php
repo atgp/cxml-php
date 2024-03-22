@@ -9,7 +9,7 @@ class ShippingContractNumber
     /**
      * @Ser\XmlValue(cdata=false)
      */
-    private string $value;
+    private $value;
 
     public function __construct(string $value)
     {
